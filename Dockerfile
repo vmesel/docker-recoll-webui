@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get install -y --force-yes recoll python-recoll python git wv poppler-utils && \
     apt-get clean
     
-RUN apt-get install -y --force-yes unrtf untex libimage-exiftool-perl antiword 
+RUN apt-get install -y --force-yes unzip unrtf untex libimage-exiftool-perl antiword 
 
 RUN mkdir /data && mkdir /root/.recoll
 RUN echo topdirs = /data >> /root/.recoll/recoll.conf
