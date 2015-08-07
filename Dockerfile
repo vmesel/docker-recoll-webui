@@ -13,14 +13,14 @@ RUN apt-get update && \
     
 RUN apt-get install -y --force-yes unzip xsltproc unrtf untex libimage-exiftool-perl antiword pstotext 
 
-RUN mkdir /data && mkdir /root/.recoll
+RUN mkdir /data && mkdir /root/.recoll && mkdir /home/root
 RUN echo topdirs = /data >> /root/.recoll/recoll.conf
 
 RUN git clone https://github.com/koniu/recoll-webui.git
-ADD start.sh /root/
+ADD start.sh /home/root/
 
 VOLUME /data
 EXPOSE 8080
 
-RUN chmod +x /root/start.sh && chmod +x /root/bgindex.sh
-CMD ["/root/start.sh"]
+RUN chmod +x /home/root/start.sh
+CMD ["/home/root/start.sh"]
