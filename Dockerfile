@@ -18,7 +18,6 @@ RUN echo topdirs = /data >> /root/.recoll/recoll.conf
 
 RUN git clone https://github.com/koniu/recoll-webui.git
 ADD start.sh /root/
-ADD bgindex.sh /root/
 
 VOLUME /data
 EXPOSE 8080
