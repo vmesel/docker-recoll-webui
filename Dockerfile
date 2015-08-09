@@ -13,14 +13,11 @@ RUN apt-get update && \
     
 RUN apt-get install -y --force-yes unzip xsltproc unrtf untex libimage-exiftool-perl antiword pstotext 
 
-RUN mkdir /data && mkdir /root/.recoll && mkdir /home/root
-RUN echo topdirs = /data >> /root/.recoll/recoll.conf
+RUN mkdir /volume1 && mkdir /root/.recoll && mkdir /home/root
 
 RUN git clone https://github.com/koniu/recoll-webui.git
-ADD start.sh /home/root/
 
-VOLUME /data
+VOLUME /volume1
 EXPOSE 8080
 
-RUN chmod +x /home/root/start.sh
-CMD ["/home/root/start.sh"]
+CMD ["cd /recoll-webui/ && /usr/bin/python webui-standalone.py -a 0.0.0.0"]
