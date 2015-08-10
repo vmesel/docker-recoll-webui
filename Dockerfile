@@ -20,4 +20,4 @@ RUN git clone https://github.com/koniu/recoll-webui.git
 VOLUME /homes
 EXPOSE 8080
 
-CMD ["cd /recoll-webui/ && /usr/bin/python webui-standalone.py -a 0.0.0.0"]
+CMD ["/usr/bin/python", "/recoll-webui/webui-standalone.py", "-a", "0.0.0.0"]
