@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Jivan Kulkarni <jivank@gmail.com>
+MAINTAINER dsheyp
 
 RUN echo deb http://www.lesbonscomptes.com/recoll/debian/ unstable main > \
 	/etc/apt/sources.list.d/recoll.list
@@ -13,7 +13,7 @@ RUN apt-get update && \
     
 RUN apt-get install -y --force-yes unzip xsltproc unrtf untex libimage-exiftool-perl antiword pstotext 
 
-RUN mkdir /homes && mkdir /root/.recoll && mkdir /home/root
+RUN mkdir /homes && mkdir /root/.recoll
 
 RUN git clone https://github.com/koniu/recoll-webui.git
 
