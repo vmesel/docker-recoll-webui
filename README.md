@@ -10,6 +10,8 @@ recoll with webui in a docker container
 - settings for recoll are stored in /root/.recoll/recoll.conf
 - volume for data to be indexed is in /homes
 
+source project: https://github.com/dsheyp/docker-recoll-webui/
+
 # installation steps
 - install the docker package on your synology (note: only some synology diskstations are able to run docker)
 - install this docker image
