@@ -9,12 +9,12 @@ recoll with webui in a docker container
     for recollindex.sh script see: github.com - remember to change CONTAINER_ID and paths to your needs
 - settings for recoll are stored in /root/.recoll/recoll.conf
 - volume for data to be indexed is in /homes
-- 
 # links
+
 - source project: https://github.com/dsheyp/docker-recoll-webui/
 - docker hub: https://hub.docker.com/r/dsheyp/docker-recoll-webui/
-- 
 # installation steps
+
 - install the docker package on your synology (note: only some synology diskstations are able to run docker)
 - install this docker image
 - in docker start the wizard to create a docker container from this image: mount /homes to /homes, mount /homes/YOUR_USER_NAME to /root, set up port mapping (defaults do also work), use 50000 and 8080 for example, don't run the container now, complete the following steps first
