@@ -28,7 +28,7 @@ docker exec CONTAINER_ID recollindex > /var/log/recollindex.log 2>&
 - install the docker package on your synology (note: only some synology diskstations are able to run docker)
 - install this docker image
 - in docker start the wizard to create a docker container from this image: mount `/homes` to `/homes`, mount `/homes/YOUR_USER_NAME` to `/root`, set up port mapping (defaults do also work), use 50000 and 8080 for example, don't run the container now, complete the following steps first
-- download recoll.conf from github and place it in `/volume1/homes/YOUR_USER_NAME/.recoll/`
+- download recoll.conf (https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recoll.conf) and place it in `/volume1/homes/YOUR_USER_NAME/.recoll/`
     remember to modify it to your needs - change the user name, ...
 - download recollindex.sh (https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recollindex.sh), place it somewhere on your synology, make it executable (in a shell run: `chmod 775 recollindex.sh`) and remember to modify `CONTAINER_ID` an paths to your needs
 - set up an automated task in the control panel of your synology with task scheduler and point it to recollindex.sh
