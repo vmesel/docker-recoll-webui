@@ -6,7 +6,14 @@ recoll with webui in a docker container
 - to start indexing it is possible to run:
     docker exec CONTAINER_ID recollindex
 - preferred method for running the indexer is setting up a task with the task scheduler and run the recollindex.sh script:
-    for recollindex.sh script see: github.com - remember to change CONTAINER_ID and paths to your needs
+    you can download the recollindex.sh from github repository:
+        https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recollindex.sh
+        or create your own by writing something like:
+    #!/bin/sh
+    
+    docker exec CONTAINER_ID recollindex > /var/log/recollindex.log 2>&
+    
+- remember to change CONTAINER_ID and paths to your needs
 - settings for recoll are stored in /root/.recoll/recoll.conf
 - volume for data to be indexed is in /homes
 # links
