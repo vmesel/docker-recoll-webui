@@ -20,5 +20,5 @@ recoll with webui in a docker container
 - complete the following steps before you run the container
 - download recoll.conf (https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recoll.conf) and place it in `/volume1/homes/YOUR_USER_NAME/.recoll/`
 - modify `recoll.conf` (change the user name, ...)
-- to run the indexer as a time-based task on a synology nas download recollindex.sh (https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recollindex.sh), place it somewhere on your synology, make it executable (in a shell run: `chmod 775 recollindex.sh`) and remember to modify `CONTAINER_ID` an paths
+- to run the indexer as a time-based task on a synology nas download `recollindex.sh` (https://raw.githubusercontent.com/dsheyp/docker-recoll-webui/master/recollindex.sh), place it somewhere on your synology, make it executable (in a shell run: `chmod 775 recollindex.sh`) and remember to modify `CONTAINER_ID` and paths
 - then set up an automated task in the control panel of your synology with task scheduler and point it to recollindex.sh
