@@ -18,6 +18,6 @@ RUN mkdir /homes && mkdir /root/.recoll
 RUN git clone https://github.com/dsheyp/recoll-webui.git
 
 VOLUME /homes
-EXPOSE 8080
+EXPOSE 8000
 
 CMD ["/usr/bin/python", "/recoll-webui/webui-standalone.py", "-a", "0.0.0.0"]
